@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #e24343;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222121;
+}
+  
+  .tabs {
+    position: absolute;
+    width: 100%;
+  /* overflow: hidden; */
+}
+
+.tabs .tabs-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #1a1919;
+  overflow: hidden;
+  padding: 26px 7%;
+  background-color: #222;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Teko', sans-serif;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar li:hover {
+  transform: scale(1.1);
+}
+
+.navbar li.active {
+  transform: scale(1.1);
+  color: var(--main-color);
+}
+
+.tabs .tabs-body {
+  position: relative;
+  height: calc(100% - 60px);
+}
+
+.tabs-body>section {
+  position: absolute;
+  top: -200%;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.tabs-body>section.active {
+  top: 0px;
+  opacity: 1;
+  transform: scale(1);
+  margin-top: 50px;
+}
+
+.imgBox {
+  max-width: 400px;
+}
+
+.imgBox img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+section .info {
+  width: 400px;
+  text-align: justify;
+}
