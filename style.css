@@ -19,7 +19,7 @@ body {
   .tabs {
     position: absolute;
     width: 100%;
-  /* overflow: hidden; */
+ 
 }
 
 .tabs .tabs-header {
@@ -107,4 +107,12 @@ body {
 section .info {
   width: 400px;
   text-align: justify;
+}
+
+.info h1 {
+  font-size: 42px;
+}
+
+.info p {
+  margin-bottom: 20px;
 }
